@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div>
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form action="/vagas/save" method="post">
+        <fieldset>
+            <div>
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" id="titulo" required>
+            </div>
+            <div>
+                <label for="salario">Salario: </label>
+                <input type="number" name="salario" id="salario" required>
+            </div>
+            <div>
+                <label for="id_candidato">Candidato: </label>
+                <select id="id_candidato" name="id_candidato" required>
+                    {% for c in candidatos %}
+                        <option value="{{c.id}}">{{c.nome}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit">Salvar</button>
+        </fieldset>
+    </form>
+
+{% endblock %}

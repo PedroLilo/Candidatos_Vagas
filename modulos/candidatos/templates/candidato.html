@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="tb_med">
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="add">
+        <a href="/candidatos/add">Adicionar</a>
+    </div>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Profissao</th>
+        </tr>
+        {% for c in candidatos %}
+        <tr>
+            <td>{{c.nome}}</td>
+            <td>{{c.profissao}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

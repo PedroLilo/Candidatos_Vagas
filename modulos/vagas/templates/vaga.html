@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<div class="tb_med">
+    {% set mensagens = get_flashed_messages() %}
+    {% if mensagens %}
+        {% for msg in mensagens %}
+            <div class="msg">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endif %}
+        <div class="add">
+            <a href="/vagas/add">Adicionar</a>
+        </div>
+            <table>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Salario</th>
+                    <th>Candidato</th>
+                    <th>Remove</th>
+                </tr>
+                {% for v in vagas %}
+                <tr>
+                    <td>{{v.titulo}}</td>
+                    <td>{{v.salario}}</td>
+                    <td>{{v.candidato.nome}}</td>
+                    <td><a href="/vagas/remove/{{v.id}}"><img src="/static/imagens/lixeira.png" alt=""></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+    </div>
+{% endblock %}

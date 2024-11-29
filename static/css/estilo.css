@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+:root {
+    --primary: #FFAA47;
+    --secondary: #8CC63F;
+    --alert: #ff0000;
+    --white: #fff;
+    --black: #000;
+}
+
+/*Header*/
+
+header{
+    display: flex;
+    background-color: var(--primary);
+    justify-content: left;
+    align-items: center;
+    height: 4rem;
+}
+
+header img{
+    width: 4rem;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav a{
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover{
+    font-weight: bold;
+    color: rgb(255, 238, 0);
+}
+
+/*Main*/
+
+main{
+    display: flex;
+    padding-top: 3rem;
+    align-items:top;
+    justify-content:center;
+    background-color: var(--white);
+    min-height: calc(100vh - 7rem);
+}
+
+
+.index{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Main Tabelas*/
+
+.tb_med{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.tb_med table tr td a img{
+    width: 4rem;
+
+}
+
+.add{
+    margin-bottom: 1rem;
+    background-color:var(--secondary);
+    height: 70px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.add a{
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+.msg{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--alert);
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+table, tr, td, th{
+    border: 2px solid var(--black);
+    border-collapse: collapse;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 2rem;
+}
+
+/*Formularios*/
+
+form{
+    padding-top: 5rem;
+}
+
+fieldset{
+    width: fit-content;
+    height: fit-content;
+    flex-direction: column;
+    padding: 2rem;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+}
+
+fieldset div{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    font-size: 2rem;
+}
+
+fieldset div input{
+    height: 2rem;
+    width: 50rem;
+    font-size: 1rem;
+}
+
+fieldset div select{
+    height: 2rem;
+    width: 50rem;
+    font-size: 1rem;
+}
+
+fieldset button{
+    font-size: 2rem;
+}
+
+button a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 10px;
+}
+
+button{
+    background-color:var(--secondary);
+    border: none;
+    border-style:solid;
+    padding: 2px;
+    height: 70px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
